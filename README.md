@@ -36,25 +36,6 @@ The main objective of this project is to help lenders assess creditworthiness by
 - Model explainability using SHAP and LIME
 - Streamlit app for interactive prediction and visualization
 
----
-
-## 🗂️ Project Structure
-credit_risk_modelling_ml/
-│
-├── notebooks/              # EDA, feature engineering, modeling experiments
-├── data/                   # Raw and processed datasets (CSV/Parquet)
-├── src/
-│   ├── preprocess.py       # Data cleaning and transformation routines
-│   ├── feature_engineering.py
-│   ├── model_train.py      # Training and validation code
-│   ├── evaluate.py         # Metrics and decile analysis
-│   ├── explain.py          # SHAP and LIME explainability utilities
-│   └── predict.py          # Utility to score new borrower instances
-├── model/                  # Saved model artifacts: .pkl, .json, hyperparameters
-├── app/
-│   └── main.py             # Streamlit app for interactive risk inference
-├── requirements.txt
-├── README.md
-└── LICENSE
+--
 
 
