@@ -1,41 +1,111 @@
-# 🏦 Credit Risk Modelling (Machine Learning Project)
+# 🎯 Credit Risk Modelling – ML-Based Loan Default Predictor
 
-This project focuses on building a machine learning model to assess credit risk by predicting the probability of a borrower defaulting. It includes the full ML pipeline — data preprocessing, feature engineering, model training, evaluation, and deployment using Streamlit.
-
----
-
-## 📌 Table of Contents
-
-1. [Project Overview](#project-overview)  
-2. [Features](#features)  
-3. [Project Structure](#project-structure)  
-4. [Installation & Setup](#installation--setup)  
-5. [Usage Guide](#usage-guide)  
-6. [Model & Methodology](#model--methodology)  
-7. [Results & Metrics](#results--metrics)  
-8. [Interpretability](#interpretability)  
-9. [Customization](#customization)  
-10. [Contributing](#contributing)  
-11. [License](#license)  
+<p align="center">
+  Predict loan default risk using real-world financial data and machine learning — deployed as a live web app for easy credit scoring.
+</p>
 
 ---
 
-## 📖 Project Overview
+## 📌 Project Overview
 
-The main objective of this project is to help lenders assess creditworthiness by developing a machine learning model that identifies potential defaulters. This model aids in reducing financial risk and improving lending decisions.
+This project aims to predict whether a loan applicant is **high risk** or **low risk** based on their financial and personal information.  
+It empowers **banks and lenders** to make smarter credit decisions using **machine learning algorithms**.
+
+> ✅ Built using **50,000+ loan records**, achieving:  
+> - 🏆 **AUC = 0.98**  
+> - 📈 **KS > 85%**  
+> - 🔁 **Recall > 90%** for default class  
 
 ---
 
-## 🚀 Features
+## 📊 Key Results
 
-- Data preprocessing with missing value handling and encoding
-- Class imbalance treatment using SMOTE or undersampling
-- Multiple model training: Logistic Regression, Random Forest, XGBoost
-- Hyperparameter tuning with Optuna or GridSearchCV
-- Evaluation with ROC-AUC, Gini, KS statistic, decile analysis
-- Model explainability using SHAP and LIME
-- Streamlit app for interactive prediction and visualization
+- 🔍 Enhanced default prediction with engineered features:
+  - **LTI Ratio** (Loan-to-Income)
+  - **Average DPN** (Days Past Due)
+- ⚖️ Balanced dataset using **SMOTE + Tomek Links**
+- ⚙️ Optimized with **Optuna**, reducing hyperparameter tuning time by ~35%
+- 🚀 Deployed as a **Streamlit web app** for real-time scoring:
+  - Credit Score: **300 – 900**
+  - Risk Category: ✅ Low Risk / ❌ High Risk (color-coded)
 
---
+---
+
+## 📂 Project Structure
+
+```bash
+credit_risk_modelling_ml/
+│
+├── app/
+│   ├── main.py                 # Streamlit app interface
+│   ├── prediction_helper.py    # Preprocessing & prediction logic
+│   └── artifacts/
+│       └── model_data.joblib   # Trained model + encoders
+│
+├── dataset/
+│   └── credit_data.csv         # Raw dataset
+│
+├── notebooks/
+│   └── credit_risk_model_jupyter_notebook.ipynb  # EDA + Training
+│
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
+```
+
+---
+
+## 🧠 How It Works
+
+1. **User Inputs:** Age, Income, Loan Amount, Employment Type, etc.
+2. **Model Processing:** Features are cleaned, scaled, and passed to the ML model.
+3. **Predictions:**  
+   - A credit score between **300–900**  
+   - Risk label: ✅ Low Risk or ❌ High Risk  
+   - Color-coded for quick visual understanding
+
+---
+
+## 🛠️ Tools & Technologies
+
+| Category          | Tools                                  |
+|------------------|----------------------------------------|
+| 🐍 Programming    | Python                                 |
+| 📊 Data Handling  | Pandas, NumPy                          |
+| 🤖 Machine Learning | Scikit-learn, XGBoost                  |
+| 📉 Visualization  | Matplotlib, Seaborn                    |
+| ⚙️ Optimization   | Optuna                                 |
+| 🔁 Sampling       | SMOTE, Tomek Links                     |
+| 🧪 Evaluation     | AUC, KS Statistic, Recall, Precision   |
+| 🌐 Deployment     | Streamlit                              |
+| 🗃️ Database       | MySQL (Optional)                       |
+| 💻 IDE            | PyCharm, VS Code                       |
+
+---
+
+## 🚀 How to Run Locally  
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/Dheeraj23-08/credit_risk_modelling_ml.git
+   cd credit_risk_modelling_ml
+   ```
+
+2. **Install dependencies**  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Streamlit app**  
+   ```bash
+   streamlit run app/main.py
+   ```
+
+---
+
+## 📺 Live Demo
+
+🔗 [Check Your Credit Score Instantly](https://creditriskmodellingml-dheerajthalour.streamlit.app/)
+
+
 
 
